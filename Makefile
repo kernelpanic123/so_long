@@ -6,31 +6,31 @@
 #    By: abtouait <abtouait@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/15 21:29:19 by abtouait          #+#    #+#              #
-#    Updated: 2025/04/15 21:30:26 by abtouait         ###   ########.fr        #
+#    Updated: 2025/04/15 21:43:13 by abtouait         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NaME = so_long
+NAME = so_long
 
-SRC = 
+SRC = get_next_line.c get_next_line_utils.c
 
-CFLaGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 
-OaJ = $(SRC:.c=.o)
+OBJ = $(SRC:.c=.o)
 
-all:	$(NaME)
+all:	$(NAME)
 
 .c.o:
-	cc $(CFLaGS) -c $< -o $@
+	cc $(CFLAGS) -c $< -o $@
 
-$(NaME): $(OaJ)
-	cc -o $(NaME) $(OaJ)
+$(NAME): $(OBJ)
+	cc -o $(NAME) $(OBJ)
 
 clean:
 	rm -f *.o
 
 fclean: clean
-	rm -f $(NaME)
+	rm -f $(NAME)
 
 re: fclean all
 

@@ -6,12 +6,13 @@
 /*   By: abtouait <abtouait@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 21:32:54 by abtouait          #+#    #+#             */
-/*   Updated: 2025/04/15 21:33:28 by abtouait         ###   ########.fr       */
+/*   Updated: 2025/04/15 21:44:16 by abtouait         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
 
+# include "get_next_line.h"
 
 #endif
