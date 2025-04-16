@@ -6,7 +6,7 @@
 /*   By: abtouait <abtouait@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 20:03:58 by abtouait          #+#    #+#             */
-/*   Updated: 2025/04/15 21:42:49 by abtouait         ###   ########.fr       */
+/*   Updated: 2025/04/16 23:01:39 by abtouait         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,7 +112,7 @@ char	*extract_line(char *str)
 	return (new_str);
 }
 
-int main(void)
+/*int main(void)
 {
 	int		fd;
 	char	*line;
@@ -128,4 +128,4 @@ int main(void)
 	}
 	close(fd);
 	return (0);
-}
+}*/
