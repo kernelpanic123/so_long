@@ -6,13 +6,13 @@
 #    By: abtouait <abtouait@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/15 21:29:19 by abtouait          #+#    #+#              #
-#    Updated: 2025/04/17 23:31:11 by abtouait         ###   ########.fr        #
+#    Updated: 2025/04/18 21:09:02 by abtouait         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = so_long
 
-SRC = get_next_line.c get_next_line_utils.c so_long.c parser.c
+SRC = get_next_line.c get_next_line_utils.c so_long.c parser.c parser_2.c flood_fill.c flood_fill_2.c
 
 CFLAGS = -Wall -Wextra -Werror
 

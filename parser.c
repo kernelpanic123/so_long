@@ -6,7 +6,7 @@
 /*   By: abtouait <abtouait@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 23:11:16 by abtouait          #+#    #+#             */
-/*   Updated: 2025/04/18 01:26:15 by abtouait         ###   ########.fr       */
+/*   Updated: 2025/04/18 23:41:18 by abtouait         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,14 +82,40 @@ int parse_player(char **map)
 int parse_square_map(char **map)
 {
 	int i;
-	int	height;
+	int	size_next_line;
 
-	height = count_lines();
 	i = 0;
 	map = parse_map();
 	while (map[i] != NULL)
 	{
-		if (height != ft_strlen(map[i]))
+		size_next_line = ft_strlen(map[0]);
+		if (size_next_line != ft_strlen(map[i]))
+			return (1);
+		i++;
+	}
+	if (i == ft_strlen(map[0]) - 1)
+		return (1);
+	return (0);
+}
+int closed_map(char **map)
+{
+	int	i;
+	int j;
+	int height;
+	
+	height = count_lines() - 1;
+	j = 0;
+	while (j <= ft_strlen(map[0]) - 2)
+	{
+
+		if (map[0][j] != '1' || map[height][j] != '1')
+			return (1);
+		j++;
+	}
+	i = 0;
+	while (map[i] != NULL)
+	{
+		if (map[i][0] != '1' || map[i][ft_strlen(map[i]) - 2] != '1')
 			return (1);
 		i++;
 	}
