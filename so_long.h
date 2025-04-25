@@ -6,7 +6,7 @@
 /*   By: abtouait <abtouait@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 21:32:54 by abtouait          #+#    #+#             */
-/*   Updated: 2025/04/25 06:07:07 by abtouait         ###   ########.fr       */
+/*   Updated: 2025/04/26 00:42:16 by abtouait         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include "mlx/mlx.h"
 # include <stdlib.h>
 # include <X11/keysym.h>
+# include "ft_printf.h"
 
 # define IMG_SIZE 64
 
@@ -37,6 +38,7 @@ typedef struct s_game
     int     nbr_item;
     int     x_exit;
     int     y_exit;
+    int     nbr_mouv;
 
 }t_game;
 

@@ -5,47 +5,33 @@
 #                                                     +:+ +:+         +:+      #
 #    By: abtouait <abtouait@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/04/15 21:29:19 by abtouait          #+#    #+#              #
-#    Updated: 2025/04/26 01:07:49 by abtouait         ###   ########.fr        #
+#    Created: 2024/12/13 20:23:16 by abtouait          #+#    #+#              #
+#    Updated: 2024/12/16 17:29:15 by abtouait         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = so_long
+NAME = libftprintf.a
 
-SRC = get_next_line.c get_next_line_utils.c so_long.c parser.c parser_2.c flood_fill.c flood_fill_2.c window.c handle_keys.c
+SRC = ft_print_putchar.c ft_print_putstr.c ft_print_dec.c ft_print_unsigned.c ft_print_hex_l.c ft_print_hex_u.c ft_print_ptr.c ft_printf.c ft_print_pourcent.c ft_itoa.c ft_strdup.c
 
-CFLAGS = -Wall -Wextra -Werror -Iprintf -g -fsanitize=address
-
-MLX_LIB = mlx/libmlx.a
-
-PRINTF_LIB = printf/libftprintf.a
+CFLAGS = -Wall -Wextra -Werror
 
 OBJ = $(SRC:.c=.o)
 
-all: $(MLX_LIB) $(PRINTF_LIB) $(NAME)
-
-$(MLX_LIB):
-	make -C mlx
-
-$(PRINTF_LIB):
-	make -C printf
+all:	$(NAME)
 
 .c.o:
-	cc $(CFLAGS) -c $< -o $@
+	gcc $(CFLAGS) -c $< -o $@
 
-$(NAME): $(OBJ) $(MLX_LIB)
-	cc -g -fsanitize=address $(OBJ) $(PRINTF_LIB) -Lmlx -lmlx -lXext -lX11 -lm -o $(NAME)
+$(NAME): $(OBJ)
+	ar rcs $(NAME) $(OBJ)
 
 clean:
 	rm -f *.o
-	make -C mlx clean
-	make -C printf clean
 
 fclean: clean
 	rm -f $(NAME)
-	rm -f mlx/libmlx.a
-	rm -f printf/libftprintf.a
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re 

@@ -6,7 +6,7 @@
 /*   By: abtouait <abtouait@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 03:39:41 by abtouait          #+#    #+#             */
-/*   Updated: 2025/04/25 05:59:58 by abtouait         ###   ########.fr       */
+/*   Updated: 2025/04/26 00:54:10 by abtouait         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ void case_w_key(t_game *data)
         data->map[data->y_player][data->x_player] = 'P';
         draw_each_square(data, 'P', data->x_player, data->y_player);
         data->nbr_item = data->nbr_item - 1;
-        
+        ft_printf("total mouvement : %d\n", data->nbr_mouv);
+        data->nbr_mouv = data->nbr_mouv + 1;
     }
     else if (data->map[data->y_player - 1][data->x_player] == 'E' && data->nbr_item != 0)
         return ;
@@ -33,7 +34,8 @@ void case_w_key(t_game *data)
         data->y_player = data->y_player - 1;
         data->map[data->y_player][data->x_player] = 'P';
         draw_each_square(data, 'P', data->x_player, data->y_player);
-                
+        ft_printf("total mouvement : %d\n", data->nbr_mouv);
+        data->nbr_mouv = data->nbr_mouv + 1;        
     }   
 }
 void case_s_key(t_game *data)
@@ -46,6 +48,8 @@ void case_s_key(t_game *data)
         data->map[data->y_player][data->x_player] = 'P';
         draw_each_square(data, 'P', data->x_player, data->y_player);
         data->nbr_item = data->nbr_item - 1;
+        ft_printf("total mouvement : %d\n", data->nbr_mouv);
+        data->nbr_mouv = data->nbr_mouv + 1;
     }
     else if (data->map[data->y_player + 1][data->x_player] == 'E' && data->nbr_item != 0)
         return ; 
@@ -56,6 +60,8 @@ void case_s_key(t_game *data)
         data->y_player = data->y_player + 1;
         data->map[data->y_player][data->x_player] = 'P';
         draw_each_square(data, 'P', data->x_player, data->y_player);
+        ft_printf("total mouvement : %d\n", data->nbr_mouv);
+        data->nbr_mouv = data->nbr_mouv + 1;
                 
     }   
 }
@@ -69,6 +75,8 @@ void case_d_key(t_game *data)
         data->map[data->y_player][data->x_player] = 'P';
         draw_each_square(data, 'P', data->x_player, data->y_player);
         data->nbr_item = data->nbr_item - 1;
+        ft_printf("total mouvement : %d\n", data->nbr_mouv);
+        data->nbr_mouv = data->nbr_mouv + 1;
     } 
     else if (data->map[data->y_player][data->x_player + 1] == 'E' && data->nbr_item != 0)
         return ;
@@ -79,6 +87,8 @@ void case_d_key(t_game *data)
         data->x_player = data->x_player + 1;
         data->map[data->y_player][data->x_player] = 'P';
         draw_each_square(data, 'P', data->x_player, data->y_player);
+        ft_printf("total mouvement : %d\n", data->nbr_mouv);
+        data->nbr_mouv = data->nbr_mouv + 1;
                 
     }   
 }
@@ -92,6 +102,8 @@ void case_a_key(t_game *data)
         data->map[data->y_player][data->x_player] = 'P';
         draw_each_square(data, 'P', data->x_player, data->y_player);
         data->nbr_item = data->nbr_item - 1;
+        ft_printf("total mouvement : %d\n", data->nbr_mouv);
+        data->nbr_mouv = data->nbr_mouv + 1;
     }
     else if (data->map[data->y_player][data->x_player - 1] == 'E' && data->nbr_item != 0)
         return ;
@@ -102,6 +114,8 @@ void case_a_key(t_game *data)
         data->x_player = data->x_player - 1;
         data->map[data->y_player][data->x_player] = 'P';
         draw_each_square(data, 'P', data->x_player, data->y_player);
+        ft_printf("total mouvement : %d\n", data->nbr_mouv);
+        data->nbr_mouv = data->nbr_mouv + 1;
                 
     }   
 }

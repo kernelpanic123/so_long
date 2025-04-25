@@ -6,7 +6,7 @@
 /*   By: abtouait <abtouait@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 19:31:08 by abtouait          #+#    #+#             */
-/*   Updated: 2025/04/25 06:55:38 by abtouait         ###   ########.fr       */
+/*   Updated: 2025/04/26 01:08:25 by abtouait         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,5 +122,6 @@ void init_var_struct(t_game *data)
     data->nbr_item = parse_item(data->map);
     data->x_exit = find_x_exit(data->map);
     data->y_exit = find_y_exit(data->map);
+    data->nbr_mouv = 1;
     
 }
